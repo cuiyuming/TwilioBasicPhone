@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageButton
+        android:id="@+id/main_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22dp"
+        android:background="#000"
+        android:padding="0dp"
+        android:gravity="center"
+        android:src="@drawable/idle"
+        android:scaleType="centerInside" />
+
+    <ToggleButton
+        android:id="@+id/speaker_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/main_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/main_button"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentLeft="true"
+        android:textOff="@string/speaker"
+        android:textOn="@string/speaker" />
+    
+    <ToggleButton
+        android:id="@+id/mute_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/main_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@+id/main_button"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentRight="true"
+        android:textOff="@string/mute"
+        android:textOn="@string/mute" />
+
+    <Button 
+        android:id="@+id/capabilites_button" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speaker_toggle"
+        android:layout_alignLeft="@+id/speaker_toggle"
+        android:layout_marginTop="10dp"
+        android:text="@string/capability"/>
+    
+    <CheckBox 
+        android:id="@+id/incoming"
+        android:text="@string/incoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capabilites_button"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/capabilites_button"
+        android:checked="true"/>
+    
+    <CheckBox 
+        android:id="@+id/outgoing"
+        android:text="@string/outgoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/incoming"
+        android:layout_alignLeft="@+id/speaker_toggle"
+        android:checked="true"/>
+
+
+    <EditText 
+        android:id="@+id/client_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_button"
+        android:layout_toRightOf="@+id/capabilites_button"
+        android:layout_alignTop="@+id/capabilites_button"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="text"
+        android:hint="@string/client_name"/>
+    
+    
+    
+    <EditText 
+        android:id="@+id/outgoing_client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_select"
+        android:layout_alignLeft="@+id/client_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"        
+        android:inputType="text"
+        android:hint="@string/outgoing_client"/>
+    
+    
+        
+    <RadioGroup
+        android:id="@+id/input_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/client_name"
+        android:layout_alignLeft="@+id/client_name"
+        android:orientation="horizontal"
+        android:checkedButton="@+id/input_text" >
+         
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_text"
+            android:text="@string/input_text" />
+         
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/input_number"
+            android:text="@string/input_number" />
+
+    </RadioGroup>
+    
+    
+    <EditText
+        android:id="@+id/log_text_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/outgoing"
+        android:layout_marginTop="16dp"
+        android:editable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textMultiLine"
+        android:gravity="top" />
+
+
+    
+
+</RelativeLayout>
